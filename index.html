@@ -120,36 +120,36 @@
                 <div class="radio-button-container">
                     <div class="column">
                         <div>
-                            <input type="radio" id="sindo-01" name="layer" value="sindo" checked>
-                            <label for="sindo-01">県南部</label>
+                            <input type="radio" id="shindo-01" name="layer" value="shindo-01" checked>
+                            <label for="shindo-01">茨城県南部の地震</label>
                         </div>
                         <div>
-                            <input type="radio" id="sindo-02" name="layer" value="sindo">
-                            <label for="sindo-02">茨城埼玉</label>
+                            <input type="radio" id="shindo-02" name="layer" value="shindo-02">
+                            <label for="shindo-02">茨城・埼玉県境の地震</label>
                         </div>
                         <div>
-                            <input type="radio" id="sindo-03" name="layer" value="sindo">
-                            <label for="sindo-03">Ｆ１断層</label>
+                            <input type="radio" id="shindo-03" name="layer" value="shindo-03">
+                            <label for="shindo-03">F1断層、北方陸域の断層、塩ノ平地震断層の連動による地震（円形破壊面を仮定しないケース）</label>
                         </div>
                         <div>
-                            <input type="radio" id="sindo-04" name="layer" value="sindo">
-                            <label for="sindo-04">棚倉断層</label>
+                            <input type="radio" id="shindo-04" name="layer" value="shindo-04">
+                            <label for="shindo-04">棚倉破砕帯東縁断層、同西縁断層の連動による地震</label>
                         </div>
                         <div>
-                            <input type="radio" id="sindo-05" name="layer" value="sindo">
-                            <label for="sindo-05">太平洋県北部（鉛直）南部</label>
+                            <input type="radio" id="shindo-05" name="layer" value="shindo-05">
+                            <label for="shindo-05">太平洋プレート内の地震（県北部（南部）鉛直）</label>
                         </div>
                         <div>
-                            <input type="radio" id="sindo-06" name="layer" value="sindo">
-                            <label for="sindo-06">太平洋県南部（鉛直）南部</label>
+                            <input type="radio" id="shindo-06" name="layer" value="shindo-06">
+                            <label for="shindo-06">太平洋プレート内の地震（県南部（南部）鉛直）</label>
                         </div>
                         <div>
-                            <input type="radio" id="sindo-07" name="layer" value="sindo">
-                            <label for="sindo-07">房総半島沖</label>
+                            <input type="radio" id="shindo-07" name="layer" value="shindo-07">
+                            <label for="shindo-07">茨城県沖から房総半島沖にかけての地震</label>
                         </div>
                         <div>
-                            <input type="radio" id="sindo-08" name="layer" value="sindo">
-                            <label for="sindo-08">２０１１東北</label>
+                            <input type="radio" id="shindo-08" name="layer" value="shindo-08">
+                            <label for="shindo-08">2011年東北地方太平洋沖地震</label>
                         </div>
                     </div>
                 </div>
@@ -244,6 +244,30 @@
                 tileSize: 256
             });
         });
+
+        // ============================== レイヤの表示・非表示切り替え制御 ==============================
+
+        // ラジオボタン要素を取得
+        var radios = document.querySelectorAll('input[type=radio][name="layer"]');
+
+        // 各ラジオボタンにイベントリスナーを設定
+        radios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                switchLayer(this.value);
+            });
+        });
+
+        // レイヤーを切り替える関数
+        function switchLayer(layerId) {
+            var layerIds = ['shindo-01', 'shindo-02', 'shindo-03', 'shindo-04',
+                'shindo-05', 'shindo-06', 'shindo-07', 'shindo-08'];
+
+            layerIds.forEach(function (id) {
+                var visibility = (id === layerId) ? 'visible' : 'none';
+                map.setLayoutProperty(id, 'visibility', visibility);
+            });
+        }
+
     </script>
 </body>
 
