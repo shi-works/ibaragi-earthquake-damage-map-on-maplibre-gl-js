@@ -311,7 +311,7 @@
 			"source": "02",
 			"source-layer": "el2fgb",
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -488,7 +488,7 @@
 			"source": "03",
 			"source-layer": "el3fgb",
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -665,7 +665,7 @@
 			"source": "04",
 			"source-layer": "el4fgb",
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -842,7 +842,7 @@
 			"source": "05",
 			"source-layer": "el5fgb",
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -1019,7 +1019,7 @@
 			"source": "06",
 			"source-layer": "el6fgb",
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -1196,7 +1196,7 @@
 			"source": "07",
 			"source-layer": "el7fgb",
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
@@ -1373,7 +1373,7 @@
 			"source": "08",
 			"source-layer": "el8fgb",
 			"layout": {
-				"visibility": "visible"
+				"visibility": "none"
 			},
 			"paint": {
 				"fill-color": [
